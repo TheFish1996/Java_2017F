@@ -11,7 +11,7 @@ void draw () {
   rect(x,y,20,30);
   //x++; //++x; x = x+1; X+= 1;
   x += speedX;
-  if (x >= 600) {
+  if (x >= 580) {
     speedX = -speedX;
   }
   if (x < 0) {
