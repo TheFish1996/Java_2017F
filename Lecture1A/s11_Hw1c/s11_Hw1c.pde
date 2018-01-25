@@ -1,3 +1,10 @@
+/*
+  
+Author: Jonathan Fishkin
+
+
+*/
+
 void setup(){
 size(800,800);
 
@@ -11,6 +18,7 @@ int y = 0;
 int x = 0;
 Z = 800 / N;
 while (x < width){
+  strokeWeight(2);
   line(x,0,x,height);
   line(0,y,width,y);
   x = x + Z;
