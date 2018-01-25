@@ -17,12 +17,14 @@ void draw(){
   int y = 0;
   int x = 0;
   Z = 800 / N;
-  while (x < width){
-    strokeWeight(2);
+  strokeWeight(3);
+  while (x <= width){
     line(x,0,x,height);
-    line(0,y,width,y);
     x = x + Z;
-    y = y + Z;
+      if (y <= height);{
+        line(0,y,width,y);
+        y = y + Z;
+      }
 }
 
 
