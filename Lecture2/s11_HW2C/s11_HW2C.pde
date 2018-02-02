@@ -1,18 +1,17 @@
 float change = 0.02;
 float x = 0;
 float y = 0;
-float curvature(float n){
+
+void curvature(float n){
  float Prev_x = -2*PI;
  float Prev_y = sin(Prev_x);
    for(x = Prev_x; x < n; x+= change){
-     float y = sin(x);
+     y = sin(x);
      line(Prev_x, Prev_y, x, y);
      Prev_x = x;
      Prev_y = y;
      
- }
-  
-  return Prev_x + Prev_y;
+   }
   
 }
 
