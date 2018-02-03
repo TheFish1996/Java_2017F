@@ -1,3 +1,11 @@
+/*
+  Author: Jonathan Fishkin
+  Cite: Dov Kruger's GitHub & Suhail Mansuri
+  
+*/
+
+
+
 float change = 0.02;
 float x = 0;
 float y = 0;
