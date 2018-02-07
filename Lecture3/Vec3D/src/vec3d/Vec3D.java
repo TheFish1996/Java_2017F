@@ -25,25 +25,48 @@ public class Vec3D {
      z = c;   
  }
  
- public String tostring(){
+ public Vec3D add (Vec3D b){
+     Vec3D result = new Vec3D(this.x + b.x, this.y + b.y, this.z + b.z );
+        return result;
+ }
+
+ public Vec3D sub (Vec3D right){
+     Vec3D result = new Vec3D(this.x - right.x, this.y - right.y, this.z - right.z);
+        return result;
+     
+     
+ }
+ public double dot (Vec3D b){
+     double result = this.x*b.x + this.y*b.y + this.z*b.z;
+     return result;
+ }
+ 
+  public static double dot (Vec3D a, Vec3D b){
+     double result = a.x*b.x + a.y*b.y + a.z*b.z;
+     return result;
+ }
+ 
+ public String toString(){
      return x + "," + y  + "," + z;
  }
 
   public static void main(String[]args){
       Vec3D a = new Vec3D(1,2,3);
       Vec3D b = new Vec3D(1.5,2.5,-3.2);
-      System.out.println(a): //1.0, 2.0, 3.0
+      System.out.println(a);  //1.0, 2.0, 3.0
+      System.out.println(b);  //1.5, 2.5, -3.2
       Vec3D c  = a.add(b);
       Vec3D e  = a.sub(b);
-      System.out.println(e);
       System.out.println(c); // 2.5, 4.5, -0.2
-      // dot(a,b) = a.x*b.x + a.y*b.y + a.z*b.z
-      double d = c.dot(a);
+      System.out.println(e);
+      double x = dot(a,b);
+      double d = a.dot(b);
       System.out.println("dot=" + d);
-      Vec3D f = a.neg(); // -1, -2, -3
+      System.out.println(x);
+ /*       Vec3D f = a.neg(); // -1, -2, -3
       System.out.println(f);
       
-      
+ */     
   }
     
 }
