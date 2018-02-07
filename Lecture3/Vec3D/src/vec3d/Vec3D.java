@@ -45,6 +45,14 @@ public class Vec3D {
      double result = a.x*b.x + a.y*b.y + a.z*b.z;
      return result;
  }
+  
+  public Vec3D neg(){
+      Vec3D result = new Vec3D(-this.x, -this.y, -this.z);
+      
+      return result;
+  
+  }
+ 
  
  public String toString(){
      return x + "," + y  + "," + z;
@@ -63,10 +71,10 @@ public class Vec3D {
       double d = a.dot(b);
       System.out.println("dot=" + d);
       System.out.println(x);
- /*       Vec3D f = a.neg(); // -1, -2, -3
+      Vec3D f = a.neg(); // -1, -2, -3
       System.out.println(f);
       
- */     
+      
   }
     
 }
