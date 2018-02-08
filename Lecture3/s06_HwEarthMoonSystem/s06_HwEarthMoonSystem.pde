@@ -39,5 +39,5 @@ void draw(){
   shape(moon);
   popMatrix();
     
-  a += 0.3;
+  a += 0.2;
 }

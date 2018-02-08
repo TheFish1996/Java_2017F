@@ -10,53 +10,65 @@ package vec3d;
  * @author jojob
  */
 public class Vec3D {
- private double x , y , z;
- 
- 
- public Vec3D(int a, int b, int c){
-     x = a;
-     y = b;
-     z = c;    
- }
- 
- public Vec3D(double a, double b, double c){
-     x = a;
-     y = b;
-     z = c;   
- }
- 
- public Vec3D add (Vec3D b){
-     Vec3D result = new Vec3D(this.x + b.x, this.y + b.y, this.z + b.z );
-        return result;
- }
 
- public Vec3D sub (Vec3D right){
-     Vec3D result = new Vec3D(this.x - right.x, this.y - right.y, this.z - right.z);
-        return result;
+    double x,y,z;
+
+
+    
+ public Vec3D (double a, double b, double c){
+     x = a;
+     y = b;
+     z = c;
+ }
      
-     
- }
- public double dot (Vec3D b){
-     double result = this.x*b.x + this.y*b.y + this.z*b.z;
-     return result;
- }
- 
-  public static double dot (Vec3D a, Vec3D b){
-     double result = a.x*b.x + a.y*b.y + a.z*b.z;
-     return result;
- }
-  
-  public Vec3D neg(){
-      Vec3D result = new Vec3D(-this.x, -this.y, -this.z);
+ public Vec3D(int a, int b, int c){    
+    x = a;
+    y = b;
+    z = c;
       
-      return result;
-  
-  }
+ }
  
  
  public String toString(){
-     return x + "," + y  + "," + z;
+      
+    return x + "," + y + "," + z;  
+      
+  }
+ 
+ 
+ public Vec3D add(Vec3D b){
+     Vec3D result = new Vec3D (this.x + b.x, this.y + b.y, this.z + b.z);
+     return result;
+     
  }
+ 
+ public Vec3D sub(Vec3D b){
+     Vec3D result = new Vec3D (this.x - b.x, this.y - b.y, this.z - b.z);
+     return result;
+     
+     
+ }
+ 
+ public static double dot(Vec3D a, Vec3D b){
+     double result = a.x*b.x + a.y*b.y + a.z*b.z; 
+     return result;    
+         
+     
+ }
+ 
+ public double dot(Vec3D b){
+     double result = this.x*b.x  + this.y*b.y + this.z*b.z;
+     return result;
+     
+     
+ }
+ 
+ public Vec3D neg(){
+     
+     Vec3D result = new Vec3D(-this.x, -this.y, -this.z);
+     return result;
+ }
+ 
 
   public static void main(String[]args){
       Vec3D a = new Vec3D(1,2,3);
