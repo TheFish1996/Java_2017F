@@ -22,7 +22,7 @@ void draw(){
     for (float y = 0; y < height; y += increment){
 
         y2 = y;
-     line(x1,y1,x2,y2); 
+    line(x1,y1,x2,y2); 
     }
     
   }
