@@ -5,10 +5,9 @@
  */
 package s07_hw2b;
 
-/**
- *
- * @author jojob
- */
+import java.lang.*;
+
+
 public class S07_Hw2b {
     
     public static double forward(double n){
@@ -17,8 +16,9 @@ public class S07_Hw2b {
             double eq = i * i;
             sum = sum + 1 / eq;
             
+            
         }
-       return sum; 
+       return Math.sqrt(6*sum); 
     }
     
     public static double backward(double n){
@@ -27,7 +27,7 @@ public class S07_Hw2b {
             double eq = i * i;
             sum = sum + 1 / eq;
         }
-       return sum;
+       return Math.sqrt(6*sum);
     }
     
     
