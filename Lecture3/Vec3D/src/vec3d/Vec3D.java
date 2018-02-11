@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package vec3d;
-
 /**
  *
- * @author jojob
+ * Author : Jonathan Fishkin
+ * Cite: Suhail Mansuri
  */
+
+package vec3d;
+
 public class Vec3D {
 
     double x , y, z;
