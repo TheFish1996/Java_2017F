@@ -33,7 +33,7 @@ public class Vec3D {
  } 
  
  public Vec3D add (Vec3D right){
-     Vec3D result = new Vec3D (this.x + right.x, this.y + right.y, this.z + right.z);
+     Vec3D result = new Vec3D (x + right.x, y + right.y, z + right.z);
      return result;
  }
  
