@@ -19,7 +19,7 @@ public class S08_HW3b {
       double sum = 0;
       
       while (s.hasNext()){
-          double i = s.nextInt();
+          double i = s.nextDouble();
           list.add(i);
           sum = sum + i;
              
