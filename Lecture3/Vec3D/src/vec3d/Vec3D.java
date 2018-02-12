@@ -49,7 +49,7 @@ public class Vec3D {
         
     }
     
-    public static double dot (Vec3D a, Vec3D b){
+    public static double dot (Vec3D a, Vec3D b){ 
         double result = a.x*b.x + a.y*b.y + a.z*b.z;
         return result;
     }
