@@ -2,7 +2,9 @@
 
 
 Author: Jonathan Fishkin
+Cite: Suhail Mansuri
 Note: The reverse sum is more accurate
+
 
 
 

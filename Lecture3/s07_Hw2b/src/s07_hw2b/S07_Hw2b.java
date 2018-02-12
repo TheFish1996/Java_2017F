@@ -1,8 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * Author : Jonathan Fishkin
+ * Cite: Suhail Mansuri
+ * Doing it backwards is more accurate
+ * 
  */
+
 package s07_hw2b;
 
 import java.lang.*;
