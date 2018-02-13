@@ -14,9 +14,12 @@ void draw(){
 }
 
 void mousePressed(){
+  float move = dx / 2;
   println(mouseX, mouseY);
   fill(255,0,0);
+  translate(move,move);
   ellipse(mouseX/dx*dx, mouseY/dx*dx, dx, dx);
+ 
   
   
 }
