@@ -8,7 +8,7 @@ package vec3d;
 
 public class Vec3D {
 
-double x, y, z;
+private double x, y, z;
 
 public Vec3D (int a, int b, int c){
     x = a;

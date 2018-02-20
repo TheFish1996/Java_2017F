@@ -18,8 +18,8 @@ public class TestRegex2 {
     String line;
     
     while ((line = br.readLine()) != null) {
-      Matcher m = p.matcher(line);
-      if (m.find()) {
+      Matcher m = p.matcher(line); // matches the new m to the new pattern
+      if (m.find()) {  // finds the next string of pattern m
         System.out.println(m.group());
       }
       

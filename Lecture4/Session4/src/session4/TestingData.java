@@ -75,21 +75,21 @@ public static void buildingArrays() {
       BufferedReader br = new BufferedReader(fr);
       String line;
       
-      HashMap<String,String> englishToChinese = new HashMap<>();
+      HashMap<String,String> englishToChinese = new HashMap<>();  // creates new hashmap
       HashMap<String,String> chineseToEnglish = new HashMap<>();
       while ((line = br.readLine()) != null) {
-        String[] words = line.split("\\s+");
-        if (words.length >= 2) {
+        String[] words = line.split("\\s+"); // splits the line into array [0] and array [1] with any number of spaces
+        if (words.length >= 2) {                              // length of the array will be 2 bc it finds two words
           System.out.println(words[0] + "-->" + words[1]);
-          englishToChinese.put(words[0], words[1]);
-          chineseToEnglish.put(words[1], words[0]);
+          englishToChinese.put(words[0], words[1]);  // puts array [0] word into english then [1] to chinese
+          chineseToEnglish.put(words[1], words[0]);  // puts array [1] into chinese and [0] into english
         } else {
           englishToChinese.put(words[0], null);
         }
       }
       br.close();
       
-      for (String english : englishToChinese.keySet()) {
+      for (String english : englishToChinese.keySet()) {  // english string mapped to the entire map (emglishToChinese)
         System.out.println(english + "==>" + englishToChinese.get(english));        
       }
       
