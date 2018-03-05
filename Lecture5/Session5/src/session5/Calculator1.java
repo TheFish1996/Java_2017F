@@ -7,7 +7,9 @@ package session5;
 
 /**
  *
- * @author O074
+ * Author : Jonathan Fishkin
+ * Cite : Suhail Mansuri 
+ * 
  */
 public class Calculator1 extends javax.swing.JFrame {
     private boolean flagadd = false;

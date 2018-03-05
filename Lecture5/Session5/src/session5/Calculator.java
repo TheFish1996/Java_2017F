@@ -9,21 +9,52 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Calculator extends JFrame {
+    private AddButton a = new AddButton();
     private Font myFont1 = new Font("Serif", Font.PLAIN, 50);
     JFrame frame;
+    private JButton zero = a.Zero();
+    private JButton one = a.One();
+    private JButton two = a.Two();
+    private JButton three = a.Three();
+    private JButton four = a.Four();
+    private JButton five = a.Five();
+    private JButton six = a.Six();
+    private JButton seven = a.Seven();
+    private JButton eight = a.Eight();
+    private JButton nine = a.Nine();
+    private JButton CE = a.CE();
+    private JButton dble = a.dble();
+    private JButton percent = a.percent();
+    private JButton square = a.square();
+    private JButton blank = a.blank();
+    private JButton blank1 = a.blank();
+    private JButton blank2 = a.blank();
+    private JButton blank3 = a.blank();
+    private JButton blank4 = a.blank();
+    private JButton blank5 = a.blank();
+    private JButton equals = a.Equals();
+    private JButton equals2 = a.Equals();
+    private JButton MRC = a.MRC();
+    private JButton Mone = a.Mone();
+    private JButton Mtwo = a.Mtwo();
+    private JButton div = a.Div();
+    private JButton addit = a.button();
+    private JButton mult = a.Mult();
+    private JButton sub = a.Subtr();
+    private JButton on = a.on();
+    private JButton dot = a.Dot();
+    
+    private JLabel label = new JLabel();
     
     Calculator (){
         setTitle("Calculator");
         setSize(700,1000);
-        AddButton a = new AddButton(); // creates a new instance of button class
         
         
 
         JPanel n = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         n.setPreferredSize(new Dimension(700,100));
-
-        n.add(a.OneRet());
-         
+        n.add(label);
          
         getContentPane().add(BorderLayout.NORTH,n);
         
@@ -34,50 +65,63 @@ public class Calculator extends JFrame {
         getContentPane().add(c);
 
         
+        dble.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                AdditActionPerformed(ae);
+            }
+        });
         
-        
-        c.add(a.dble());
-        c.add(a.square());
-        c.add(a.percent());
-        c.add(a.blank());
-        c.add(a.Div());
-        c.add(a.MRC());
-        c.add(a.Mone());
-        c.add(a.Mtwo());
-        c.add(a.blank());
-        c.add(a.Mult());
+        c.add(dble);
+        c.add(square);
+        c.add(percent);
+        c.add(blank);
+        c.add(div);
+        c.add(MRC);
+        c.add(Mone);
+        c.add(Mtwo);
+        c.add(blank1);
+        c.add(mult);
    
-        c.add(a.Seven());
-        c.add(a.Eight());
-        c.add(a.Nine());
+        c.add(seven);
+        c.add(eight);
+        c.add(nine);
         
-        c.add(a.blank());
-        c.add(a.Subtr());
+        c.add(blank2);
+        c.add(sub);
         
-        c.add(a.Four());
-        c.add(a.Five());
-        c.add(a.Six());
+        c.add(four);
+        c.add(five);
+        c.add(six);
         
-        c.add(a.blank());
-        c.add(a.Addition());
+        c.add(blank3);
+        c.add(addit);
         
-        c.add(a.One());
-        c.add(a.Two());
-        c.add(a.Three());
+        c.add(one);
+        c.add(two);
+        c.add(three);
         
-        c.add(a.blank());
-        c.add(a.Equals());
-        c.add(a.on());
-        c.add(a.Zero());
-        c.add(a.Dot());
-        c.add(a.blank());
-        c.add(a.Equals());
+        c.add(blank4);
+        c.add(equals);
+        c.add(on);
+        c.add(zero);
+        c.add(dot);
+        c.add(blank5);
+        c.add(equals2);
         
   
         
         
         setVisible(true);
+        
+       
     }
+    
+    
+    private void AdditActionPerformed(java.awt.event.ActionEvent evt) {                // have to deifne everything seperately
+        double x = 0;
+    }
+    
+    
     
     
     public static void main (String [] args){
@@ -115,12 +159,12 @@ class AddButton extends JFrame {
     }
     
     public JButton on(){                 // on/c button
-        double var = 0;
+ 
         JButton a = new JButton("ON/C");
         a.setFont(myFont);
         a.setBackground(Color.red);
         a.setForeground(Color.white);
-        a.addActionListener(new Listener(var));
+  
         
      return a;
         
@@ -248,18 +292,15 @@ class AddButton extends JFrame {
      }
     
     
-     public JLabel OneRet(){
- 
-       return OneRet;  
-     }
+    
      
      public JButton One(){              // One
-        double var = 1;
+
         JButton a = new JButton("1"); 
         a.setFont(myFont);
         a.setBackground(Color.white);
         a.setForeground(Color.black);
-        a.addActionListener(new Listener(var));
+ 
  
  
        
@@ -269,12 +310,12 @@ class AddButton extends JFrame {
      }
      
      public JButton Two(){              // Two
-        double var = 2;
+  
         JButton a = new JButton("2"); 
         a.setFont(myFont);
         a.setBackground(Color.white);
         a.setForeground(Color.black);
-        a.addActionListener(new Listener(var));
+
      
      
  
@@ -282,12 +323,12 @@ class AddButton extends JFrame {
      }
      
      public JButton Three(){              // 3
-        double var = 3;
+  
         JButton a = new JButton("3"); 
         a.setFont(myFont);
         a.setBackground(Color.white);
         a.setForeground(Color.black);
-        a.addActionListener(new Listener(var));
+  
     
        
  
@@ -295,12 +336,12 @@ class AddButton extends JFrame {
      }
      
      public JButton Four(){              // 4
-        double var = 4;
+
         JButton a = new JButton("4"); 
         a.setFont(myFont);
         a.setBackground(Color.white);
         a.setForeground(Color.black);
-        a.addActionListener(new Listener(var));
+
     
        
  
@@ -308,12 +349,12 @@ class AddButton extends JFrame {
      }
      
      public JButton Five(){              // 5
-        double var = 5;
+
         JButton a = new JButton("5"); 
         a.setFont(myFont);
         a.setBackground(Color.white);
         a.setForeground(Color.black);
-        a.addActionListener(new Listener(var));
+
    
       
  
@@ -321,25 +362,24 @@ class AddButton extends JFrame {
      }
      
      public JButton Six(){              // 6
-        double var = 6;
+     
         JButton a = new JButton("6"); 
         a.setFont(myFont);
         a.setBackground(Color.white);
         a.setForeground(Color.black);
-        a.addActionListener(new Listener(var));
-    
+
  
      return a;
      }
      
 
     public JButton Seven(){              // 7
-        double var = 7;
+      
         JButton a = new JButton("7"); 
         a.setFont(myFont);
         a.setBackground(Color.white);
         a.setForeground(Color.black);
-        a.addActionListener(new Listener(var));
+
     
    
  
@@ -347,52 +387,29 @@ class AddButton extends JFrame {
      }
     
     public JButton Eight(){              // 8
-        double var = 8;
+       
         JButton a = new JButton("8"); 
         a.setFont(myFont);
         a.setBackground(Color.white);
         a.setForeground(Color.black);
-        a.addActionListener(new Listener(var));
-  
+
  
      return a;
      }
     
     public JButton Nine(){              // 9
-        double var = 9;
+      
         JButton a = new JButton("9"); 
         a.setFont(myFont);
         a.setBackground(Color.white);
         a.setForeground(Color.black);
-        a.addActionListener(new Listener(var));
+
         
         return a;
     }
    
     
-    
- class Listener implements ActionListener {
-  
-     private double var1;
-     
-  Listener(double x){
-     
-      var1 = x;
-      
-      
-  }
-  
-  public void actionPerformed(ActionEvent click) {
-    
-    if (OneRet.getText().isEmpty()){   
-        OneRet.setFont(myFont1);
-        OneRet.setText(var1 + "");   
-    }
-    
-   
-  }
-  
- }
+
  
 }
     
