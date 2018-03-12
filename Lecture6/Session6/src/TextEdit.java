@@ -1,6 +1,9 @@
 /**
  *
- *  Author: Jonathan Fishkin
+ *  Author : Jonathan Fishkin
+ * Cite : Suhail Mansuri
+ * 
+ * 
  */
 import javax.swing.*;
 import java.awt.*;
@@ -23,6 +26,9 @@ public class TextEdit extends JFrame {
      private String prevText;
      private int startpos;
      private int endpos;
+     private int charact;
+     private int caractSize;
+     private String real;
      Font val = new Font("Helvetica",Font.PLAIN, 30 );
      Font val1 = new Font("Helvetica",Font.PLAIN, 20 );
 
@@ -233,26 +239,24 @@ public class TextEdit extends JFrame {
            
            
            public void actionPerformed(ActionEvent ae){
-               int i;
-               String filling = " ";
-               String real = "";
+               
+               real = "";
             
                prevText = text.getText();
                
-               startpos = text.getSelectionStart();
+  /*             startpos = text.getSelectionStart();
                endpos = text.getSelectionEnd();
                
-               i = endpos - startpos;                      // gives you the amount of spaces that are needed to be saved to paste the value
+               caractSize = endpos - startpos;                      // gives you the amount of spaces that are needed to be saved to paste the value
                
-               for (int j = 0; j < i; j++){                // creates a loop that adds tot he string value
+               for (int j = 0; j < caractSize; j++){                // creates a loop that adds tot he string value
                    
                   real = real + filling;
                     
                }
                
-               System.out.println(real);
-               
-               text.setText(prevText.replaceAll(textSel, real));          // replaces the selected string with the amount of characters that were in the loop
+   */            
+               text.setText(prevText.replaceAll(textSel, ""));          // replaces the selected string with the amount of characters that were in the loop
               
                
            }
@@ -265,11 +269,29 @@ public class TextEdit extends JFrame {
            
            public void actionPerformed(ActionEvent ae){
                
-               prevText = text.getText();  
-               text.setText(prevText);
-               text.setSelectionStart(startpos);
-               text.setSelectionEnd(endpos);
+               int m;
+               
+               m = text.getCaretPosition();
+               
+               if (m != charact || m == charact){
+               
+               prevText = text.getText();
+               String s = prevText.substring(0, m);
+               String t = prevText.substring(m, prevText.length());
+               System.out.println(prevText.length());
+               System.out.println(s.length());
+               System.out.println(t.length());
+               text.setText(s + textSel + t);
+               
+  /*           text.setSelectionStart(m);
+               text.setSelectionEnd(m + textSel.length());
+               text.setText(s + textSel + t);
+               
+               text.setSelectionStart(m);
+               text.setSelectionEnd(m + textSel.length());
                text.replaceSelection(textSel);
+   */            
+               }
                
            }
            
@@ -284,6 +306,9 @@ public class TextEdit extends JFrame {
            public void actionPerformed(ActionEvent ae){
                
                textSel = text.getSelectedText();
+               
+               charact = text.getCaretPosition();
+ 
                
            }
            
