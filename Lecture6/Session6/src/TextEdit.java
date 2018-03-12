@@ -265,8 +265,7 @@ public class TextEdit extends JFrame {
            
            public void actionPerformed(ActionEvent ae){
                
-               prevText = text.getText();
-               System.out.println(textSel);   
+               prevText = text.getText();  
                text.setText(prevText);
                text.setSelectionStart(startpos);
                text.setSelectionEnd(endpos);
