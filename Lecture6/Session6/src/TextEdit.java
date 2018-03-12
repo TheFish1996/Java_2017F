@@ -256,7 +256,7 @@ public class TextEdit extends JFrame {
                }
                
    */            
-               text.setText(prevText.replaceAll(textSel, ""));          // replaces the selected string with the amount of characters that were in the loop
+               text.setText(prevText.replaceFirst(textSel, ""));          // replaces the selected string with the amount of characters that were in the loop
               
                
            }
