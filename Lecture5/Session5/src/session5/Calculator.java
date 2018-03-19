@@ -62,7 +62,7 @@ public class Calculator extends JFrame {
     //    Container c = getContentPane();
           Container c = new Container();
           c.setLayout(new GridLayout(6,8,2,2));
-        getContentPane().add(c);
+          getContentPane().add(c);
 
         
         one.addActionListener(new ActionListener() {
