@@ -23,7 +23,7 @@ public class GUIReview extends JFrame {
     JPanel
     Action listener
    
- */    
+ */  
     
     private JTextField fiel;
             
@@ -31,7 +31,7 @@ public class GUIReview extends JFrame {
        
        Font myfont1 = new Font("Helvetica",Font.PLAIN, 20);   // creates a new font
        
-       setSize(600,800);                  // sets the size, length and height
+       super.setSize(600,1000);                  // sets the size, length and height
        setTitle("GUI Review");            // sets the title of the frame
        
        JMenuBar men = new JMenuBar();     // created a new menu bar to the frame
