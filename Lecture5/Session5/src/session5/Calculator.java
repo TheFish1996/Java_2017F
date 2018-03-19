@@ -65,7 +65,7 @@ public class Calculator extends JFrame {
         getContentPane().add(c);
 
         
-        dble.addActionListener(new ActionListener() {
+        one.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 AdditActionPerformed(ae);
             }
@@ -118,7 +118,8 @@ public class Calculator extends JFrame {
     
     
     private void AdditActionPerformed(java.awt.event.ActionEvent evt) {                // have to deifne everything seperately
-        double x = 0;
+        double x = 1;
+        label.setText(x + "");
     }
     
     
