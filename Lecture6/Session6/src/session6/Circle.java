@@ -10,8 +10,8 @@ package session6;
 public class Circle extends Shape2D {
     private int r;
     
-    public Circle (int x, int y, int r){
-       super(x,y); 
+    public Circle (int a, int b, int r){
+       super(a,b);    // calls the abstract constructor
        this.r = r;
            
     }

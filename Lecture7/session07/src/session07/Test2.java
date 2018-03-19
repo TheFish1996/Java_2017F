@@ -5,6 +5,8 @@
 
 package session07;
 
+import java.util.*;
+
 
 public class Test2 {
 
@@ -20,8 +22,13 @@ public class Test2 {
        C1 c2 = new C(); // __________________________
        D d1 = new D(); // __________________________
        E e1 = new E();  
-        
-        
+       Z z1 = new Z() {
+      
+           public void f() {
+               throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+           }
+       };
+  
         
         
     }
@@ -65,4 +72,10 @@ abstract class D implements C1{         // if you write this you dont need to in
 
 class E extends D {
   public void f() { System.out.println("testing"); }
+}
+
+ interface Z extends C1 {
+
+//     public void f();
+     
 }
