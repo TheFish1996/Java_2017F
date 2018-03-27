@@ -4,6 +4,7 @@ package session07;
  *
  * @author dkruger
  */
+// everything by default inherits object
 public class PersonBean {
   private String firstName;
   private String lastName;
@@ -27,7 +28,7 @@ public class PersonBean {
   public void setFirstName(String name) {
     firstName = name;
   }
-  public int getAge() {
+  public int getAge() {               // has to be the same name as set
     return age;
   }
   public void setAge(int age) {

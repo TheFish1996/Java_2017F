@@ -11,9 +11,9 @@ public class BeanEditor extends JFrame {
   private Object edit;
 //  private JTextField tf[];
   private String[] getAttributeList(Object edit) {
-    Class c = edit.getClass();
-    Method[] methods = c.getMethods();
-    HashSet<String> getters = new HashSet<>();
+    Class c = edit.getClass();               
+    Method[] methods = c.getMethods();                 //gets all the method names
+    HashSet<String> getters = new HashSet<>();         //set has no order and no duplicates, just tells you if things are there
     HashSet<String> setters = new HashSet<>();
     for (int i = 0; i < methods.length; ++i) {
       String name = methods[i].getName();
