@@ -30,10 +30,10 @@ public class Quiz {
        
         Quiz a = new Quiz();
         a.d.test();
-        d.test();
+        d.test();    // static reference
         
         a.b.h();
-        b.h(); 
+        b.h();    //static reference
         
         
     }
