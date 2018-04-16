@@ -68,7 +68,7 @@ public class Test3 extends JFrame {
           
           if (x > 0.5){
               
-              cont.setBackground(Color.GREEN);
+             cont.setBackground(Color.GREEN);
           } else {
               
             cont.setBackground(Color.GRAY);
@@ -80,7 +80,7 @@ public class Test3 extends JFrame {
     }
     
   
-     static  class SecondListener implements ActionListener{          // static class aka static inner class. static classes can only modify static methods or variables
+     static class SecondListener implements ActionListener{          // static class aka static inner class. static classes can only modify static methods or variables
                                                                       // static classes can only be written inside parent classes.
     
         public void actionPerformed(ActionEvent e){
