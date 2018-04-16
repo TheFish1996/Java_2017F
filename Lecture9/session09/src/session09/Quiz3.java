@@ -17,46 +17,39 @@ import javax.swing.*;
 
 public class Quiz3 extends JFrame {
     
-    private JButton a;
-    private JButton b;
-    private JTextField c;
+    
+    private Container cont;
     
     public Quiz3(){
         
         setSize(400,600);
         
-        a = new JButton("Hello");
+        JButton a = new JButton("Hello");
         a.addActionListener(new MyListener());
-        b = new JButton("send me");
+        JButton b = new JButton("send me");
         b.addActionListener(new ActionListener(){      // this is an example of an anonymous inner class because it is editing the main class method of action performed without writing a new class
             
           public void actionPerformed(ActionEvent e){
               
-              c.setText("my name jeff");
+              cont.setBackground(Color.red);
           }  
             
         });
-        c =  new JTextField("Beginning");
+     
         
-        Container cont = getContentPane();
+        cont = getContentPane();
+        cont.setBackground(Color.blue);
         
         cont.add(BorderLayout.NORTH, a);
         cont.add(BorderLayout.SOUTH, b);
-        cont.add(BorderLayout.CENTER, c);
+       
         
         
         setVisible(true);
         
     }
     
-    public static void main (String [] args){
-        
-        
-        new Quiz3();
-        
-        
-        
-    }
+ 
     
     
   class MyListener implements ActionListener {        //inner class
@@ -65,13 +58,23 @@ public class Quiz3 extends JFrame {
       public void actionPerformed(ActionEvent e){
           
           
-          c.setText("This test was replaced");
+          cont.setBackground(Color.yellow);
           
           
       }
       
       
   }  
-    
-    
+   
+  
+     public static void main (String [] args){
+        
+        
+        new Quiz3();
+        
+        
+        
+    }
+  
+  
 }

@@ -12,6 +12,8 @@ package session09;
 public class Quiz1 {
     private static String h; // has to be static for it to see it
 
+    
+    
   public static class StaticClass {
      private int a, b; 
      
