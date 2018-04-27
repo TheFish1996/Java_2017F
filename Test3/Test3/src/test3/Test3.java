@@ -15,6 +15,7 @@ public class Test3 extends JFrame {
     private JButton a;
     private JButton b;
     private JButton c;
+    private JTextArea pan;
     private static Container cont; 
     
     public Test3(){
@@ -33,6 +34,8 @@ public class Test3 extends JFrame {
             } 
          });
         
+        pan = new JTextArea("default");
+    
         b = new JButton("its me");
         b.addActionListener(new MyListener());
         c = new JButton("jon");
@@ -41,9 +44,13 @@ public class Test3 extends JFrame {
         cont = getContentPane();
         cont.setBackground(Color.yellow);
         
+        cont.add(BorderLayout.WEST,pan);
         cont.add(BorderLayout.NORTH, a);
         cont.add(BorderLayout.EAST, b);
         cont.add(BorderLayout.SOUTH, c);
+        
+        
+        
         
         
         setVisible(true);
@@ -65,14 +72,19 @@ public class Test3 extends JFrame {
         public void actionPerformed(ActionEvent e){
             
           double x = Math.random();
+  
+          String s = x + "";
           
           if (x > 0.5){
               
              cont.setBackground(Color.GREEN);
+             pan.setText(s.substring(0,4));
+             
           } else {
               
             cont.setBackground(Color.GRAY);
-              
+            pan.setText(s.substring(0,4));  
+            
           }
                           
         }
@@ -87,9 +99,13 @@ public class Test3 extends JFrame {
             
           double x = Math.random();
           
+          
+          
           if (x > 0.5){
               
               cont.setBackground(Color.GREEN);               // cont is a static variable try editing any other variable here and it wont work
+        
+              
           } else {
               
             cont.setBackground(Color.GRAY);
